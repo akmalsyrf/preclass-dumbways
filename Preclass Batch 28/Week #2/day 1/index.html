@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Number</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css"></link>
+  </head>
+<body>
+    <!-- begin container flex -->
+    <div class="container">
+        <!-- begin left side -->
+        <div class="left-side">
+          <div class="card">
+              <h2>Check Number</h2>
+                <input type="number" class="input-box" id="input-number">
+                <button id="btn-odd" onclick="odd()" ><i class="icons fa fa-search"></i>Check Odd Number</button>
+                <button id="btn-even" onclick="even()"><i class="icons fa fa-search"></i>Check Even Number</button>
+                <button id="btn-prime" onclick="prime()"><i class="icons fa fa-search"></i>Check Prime Number</button>
+            </div>
+          </div>
+          <!-- finish left side -->
+          <!-- begin right side -->
+          <div class="right-side">
+            <h1>Result</h1>
+            <p>Below is the result of the operation</p>
+            <div id="show-number"></div>
+            <div class="toggle">
+              <img src="math.svg" alt="" id="img-empty" class=""><br> 
+              <button id="btn-reset" class="hide"><i class="icons fas fa-trash-alt"></i>Reset</button>
+            </div>
+          </div>
+          <!-- finish right side -->
+    </div>
+    <!-- finish container flex -->
+    <script src="index.js"></script>
+  </body>
+</html>

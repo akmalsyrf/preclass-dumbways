@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Biodata Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-side">
+        <h1>Bio Form</h1>
+        <img src="img/person.svg" alt="img" />
+        <div class="info">
+          <span class="text name"><i class="icons far fa-id-badge"></i>&ltYour name here&gt</span>
+        </div>
+        <div class="info">
+          <span class="text summary"><i class="icons fas fa-id-badge"></i>&ltYour summary here&gt</span>
+        </div>
+        <div class="info">
+          <span class="text phone"><i class="icons fas fa-phone-alt"></i>&ltYour phone here&gt</span>
+        </div>
+        <div class="info">
+          <span class="text gender"><i class="icons fas fa-mars"></i>&ltYour gender here&gt</span>
+        </div>
+        <div class="info">
+          <span class="text birth"><i class="icons fas fa-id-badge"></i>&ltYour birth here&gt</span>
+        </div>
+        <div class="info">
+          <span class="text jobs"><i class="icons fas fa-id-badge"></i>&ltYour job here&gt</span>
+        </div>
+        <div class="info">
+          <span class="text edu"><i class="icons fas fa-id-badge"></i>&ltYour education here&gt</span>
+        </div>
+        <div class="info">
+          <span class="text address"><i class="icons fas fa-map-marker-alt"></i>&ltYour address here&gt </span>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="card">
+          <form action="#" id="form" method="POST">
+            <h1>Input Your Data</h1>
+            <div class="group-input">
+              <label for="name">Name</label>
+              <input id="name" type="text" name="name" required />
+            </div>
+            <div class="group-input">
+              <label for="summary">Summary</label>
+              <input id="summary" type="text" name="summary" required />
+            </div>
+            <div class="choose-parent">
+              <div class="choose-child">
+                <div class="group-input">
+                  <label for="phone">Phone</label>
+                  <input id="phone" type="text" name="phone" pattern="[0-9]+" required />
+                </div>
+                <div class="app-form-group left">
+                  <h2>Gender</h2>
+                  <input type="radio" name="gender" id="genderf" value="a Female" />
+                  <label for="genderf">Female</label>
+
+                  <input type="radio" name="gender" id="genderm" value="a Male" />
+                  <label for="genderm">Male</label>
+                </div>
+                <div class="app-form-group left">
+                  <h2>Birthday</h2>
+                  <input id="birth" type="date" name="birth" required />
+                </div>
+              </div>
+              <div class="choose-child">
+                <div class="app-form-group right">
+                  <h2>Jobs</h2>
+                  <select name="jobs" id="jobs" required>
+                    <option selected disabled>Select</option>
+                    <option id="empl" value="Employee">Employee</option>
+                    <option id="cgov" value="Civil Goverment">Civil Goverment</option>
+                    <option id="stu" value="Student">Student</option>
+                    <option id="freelan" value="Freelancer">Freelancer</option>
+                    <option id="enter" value="Entrepreneur">Entrepreneur</option>
+                    <option id="fresh" value="Freshgraduate">Freshgraduate</option>
+                  </select>
+                </div>
+                <div class="app-form-group right">
+                  <h2>Education</h2>
+                  <input type="checkbox" name="edu" id="edu1" value="Bachelor Degree" />
+                  <label for="edu1"> Bachelor Degree</label><br />
+                  <input type="checkbox" name="edu" id="edu2" value="Senior High School" />
+                  <label for="edu2"> Senior High School</label><br />
+                  <input type="checkbox" name="edu" id="edu3" value="Junior High School" />
+                  <label for="edu3"> Junior High School</label><br />
+                  <input type="checkbox" name="edu" id="edu4" value="Elementary School" />
+                  <label for="edu4"> Elementary School</label>
+                </div>
+              </div>
+            </div>
+            <div class="group-input">
+              <label for="address">Address</label>
+              <textarea id="address" name="address" cols="50" rows="5" required></textarea>
+            </div>
+            <div class="btn-submit">
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

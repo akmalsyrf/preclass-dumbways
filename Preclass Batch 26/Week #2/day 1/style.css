@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*this*/
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* --begin left side-- */
+.left-side {
+  background: linear-gradient(to right, #49a09d, #5f2c82);
+  flex: 58%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5% 1%;
+}
+
+.left-side .card {
+  background: white;
+  width: 70%;
+  padding: 0 5%;
+  border-radius: 5%;
+  font-size: 1em;
+}
+
+.left-side .card h2 {
+  font-weight: 700;
+  font-size: 1.5em;
+  text-align: center;
+  margin: 3% 0;
+  color: rgb(142, 73, 232);
+}
+
+.group-input {
+  margin-bottom: 10%;
+}
+
+.input-box {
+  width: 100%;
+  height: 50px;
+  background-color: #f1f1f1;
+  border: 2px solid #d5d5d5;
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.input-box:focus {
+  outline: none;
+  border: 2px solid gray;
+}
+
+.icons {
+  color: white;
+  margin-right: 10px;
+}
+
+.btn-submit {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.btn-submit button {
+  height: 55px;
+  width: 100%;
+  background: rgb(142, 73, 232);
+  border-radius: 10px;
+  border: 0;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.btn-submit button:active {
+  background: #fb91f1;
+  transition: 0.4s;
+}
+/* --finish left side-- */
+
+/* --begin right side-- */
+.right-side {
+  align-items: center;
+  padding: 5%;
+  flex: 60%;
+}
+
+.right-side h1 {
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 1.2; /*this*/
+  margin-bottom: 20px;
+  color: rgb(142, 73, 232);
+}
+
+.right-side p {
+  color: grey;
+  margin: 20px 0;
+}
+
+.right-side #show-number {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.right-side #show-number span {
+  padding: 5px;
+  font-size: 2em;
+  color: green;
+  margin-bottom: 20px;
+}
+
+.btn-reset button {
+  height: 55px;
+  width: 100px;
+  background: red;
+  border-radius: 10px;
+  border: 0;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.btn-reset button:active {
+  background: rgb(241, 102, 102);
+  transition: 0.4s;
+}
+/*--finish right side--*/
+/* --begin media queries-- */
+@media only screen and (max-width: 1200px) {
+  .left-side .card {
+    font-size: 0.9em;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .left-side .card {
+    font-size: 0.7em;
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+  .right-side {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .left-side {
+    padding: 50px 0;
+  }
+  .left-side .card {
+    font-size: 1em;
+    border-radius: 1%;
+    width: 85%;
+  }
+}
+/* finish media queries */

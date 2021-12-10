@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* --begin left side-- */
+.left-side {
+  background: linear-gradient(to right, #49a09d, #5f2c82);
+  flex: 58%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5% 1%;
+}
+
+.left-side .card {
+  background: white;
+  width: 60%;
+  padding: 8% 5%;
+  border-radius: 5%;
+  font-size: 1em;
+}
+
+.left-side .card h2 {
+  font-weight: 700;
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 7%;
+  color: rgb(142, 73, 232);
+}
+
+.input-box {
+  margin-bottom: 5%;
+  width: 100%;
+  height: 50px;
+  background-color: #f1f1f1;
+  border: 2px solid #d5d5d5;
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.input-box:focus {
+  outline: none;
+  border: 2px solid gray;
+}
+
+.icons {
+  color: white;
+  margin-right: 10px;
+}
+
+.left-side .card button {
+  text-align: center;
+  margin: 10px 0;
+  height: 55px;
+  width: 100%;
+  background: rgb(142, 73, 232);
+  border-radius: 10px;
+  border: 0;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.left-side .card button:hover {
+  background: #fb91f1;
+  transition: 0.1s;
+}
+/* --finish left side-- */
+
+/* --begin right side-- */
+.right-side {
+  align-items: center;
+  padding: 5%;
+  flex: 60%;
+}
+
+.right-side h1 {
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: rgb(142, 73, 232);
+}
+
+.right-side p {
+  color: grey;
+  margin: 20px 0;
+}
+
+.right-side #show-number {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.right-side #show-number span {
+  padding: 5px;
+  font-size: 2em;
+  color: green;
+  margin-bottom: 20px;
+}
+
+.hide {
+  display: none;
+}
+
+#btn-reset {
+  height: 55px;
+  width: 100px;
+  background: red;
+  border-radius: 10px;
+  border: 0;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+#btn-reset:active {
+  background: rgb(241, 102, 102);
+  transition: 0.4s;
+}
+/*--finish right side--*/

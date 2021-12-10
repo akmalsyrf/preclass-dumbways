@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>calculator</title>
+    <style>
+      .toggle {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background">
+      <div class="container">
+        <div class="screen">
+          <div class="screen-body">
+            <div class="screen-body-item left">
+              <div class="app-title">
+                <span class="output">&ltResults will appear here&gt</span>
+              </div>
+            </div>
+            <div class="screen-body-item">
+              <div class="app-info">
+                <form class="app-form-group">
+                  <input type="number" class="app-form-control num1" placeholder="Input First Number Here" required />
+
+                  <select class="operation">
+                    <option checked>Choose Operation</option>
+                    <option value="1">+</option>
+                    <option value="2">-</option>
+                    <option value="3">X</option>
+                    <option value="4">/</option>
+                    <option value="5">^2</option>
+                    <option value="6">√2</option>
+                  </select>
+
+                  <!-- <div class="toggle"> -->
+                    <input type="number" class="app-form-control num2" placeholder="Input Second Number Here" />
+                  </div>
+
+                  <button type="submit" class="app-form-button submit">SUBMIT</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const form = document.querySelector(".app-form-group");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var angka1 = parseInt(document.querySelector(".num1").value);
+        var operasi = parseInt(document.querySelector(".operation").value);
+
+        var input2 = parseInt(document.querySelector(".num2").value);
+
+        function angka2() {
+          return input2;
+        }
+        function penjumlahan(a, b) {
+          const hasil = a + b;
+          document.querySelector(".output").innerHTML = hasil;
+        }
+        function pengurangan(a, b) {
+          const hasil = a - b;
+          document.querySelector(".output").innerHTML = hasil;
+        }
+        function perkalian(a, b) {
+          const hasil = a * b;
+          document.querySelector(".output").innerHTML = hasil;
+        }
+        function pembagian(a, b) {
+          const hasil = a / b;
+          document.querySelector(".output").innerHTML = hasil;
+        }
+
+        function pemangkatan(a) {
+          const hasil = a * a;
+          document.querySelector(".output").innerHTML = hasil;
+        }
+
+        function akar(a) {
+          const hasil = Math.sqrt(a);
+          document.querySelector(".output").innerHTML = hasil;
+        }
+
+        if (operasi === 1) {
+          angka2();
+          penjumlahan(angka1, input2);
+        } else if (operasi === 2) {
+          angka2();
+          pengurangan(angka1, input2);
+        } else if (operasi === 3) {
+          angka2();
+          perkalian(angka1, input2);
+        } else if (operasi === 4) {
+          angka2();
+          pembagian(angka1, input2);
+        } else if (operasi === 5) {
+          pemangkatan(angka1);
+        } else if (operasi === 6) {
+          akar(angka1);
+        }
+      });
+    </script>
+  </body>
+</html>

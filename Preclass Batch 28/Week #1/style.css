@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: flex;
+}
+
+/* Left side */
+.left-side {
+  align-items: center;
+  padding: 5% 2%;
+  flex: 28%;
+  font-size: 16px;
+}
+
+.left-side h1 {
+  color: rgb(83, 43, 194);
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 1.2;
+  margin-bottom: 34px;
+}
+
+.left-side div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3%;
+}
+
+.icons {
+  color: rgb(58, 17, 172);
+  margin-right: 10px;
+}
+
+.left-side span {
+  margin-left: 10px;
+  font-size: 1em;
+}
+
+/*finish left side*/
+
+/* Right side */
+.right-side {
+  background: url(https://superdevresources.com/wp-content/uploads/2015/12/new-york-background.jpg) no-repeat center;
+  flex: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.right-side .card {
+  width: 60%;
+  padding: 0 5%;
+  box-shadow: 0 3px 2px -1px gray;
+  border-radius: 5%;
+  color: #fff;
+  font-size: 1em;
+  margin: 40px auto;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.right-side .card h1 {
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+  margin: 3% 0;
+}
+
+.group-input {
+  margin-bottom: 5%;
+}
+
+.group-input label {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+.group-input input,
+.app-form-group.left input[type="date"],
+.app-form-group.right select {
+  color: #fff;
+  width: 100%;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 2px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.group-input input:focus {
+  border: 2px solid #d5d5d5;
+  outline: none;
+}
+
+/* flex two segmented */
+.choose-parent {
+  margin-top: 15px;
+  display: flex;
+}
+.choose-child {
+  width: 50%;
+  justify-content: left;
+}
+
+.choose-child h2 {
+  display: block;
+  font-weight: 500;
+  font-size: 1.2em;
+  line-height: 1.4;
+  margin-bottom: 2%;
+}
+
+.app-form-group.left {
+  background: none;
+  border: none;
+  font-size: 1em;
+  outline: none;
+  margin-bottom: 5%;
+}
+
+.app-form-group.right {
+  margin-left: 20%;
+  margin-bottom: 5%;
+}
+.app-form-group.right select option {
+  color: black;
+}
+/* finish flex two segmented */
+
+.group-input textarea {
+  color: #fff;
+  width: 100%;
+  height: 120px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 2px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 0 10px;
+  resize: none;
+}
+
+.group-input textarea:focus {
+  border: 2px solid #d5d5d5;
+  outline: none;
+}
+
+.btn-submit {
+  margin-top: 40px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.btn-submit button {
+  display: inline-block;
+  padding: 24px 32px;
+  border: 0;
+  text-decoration: none;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.btn-submit button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+/* finish right side */

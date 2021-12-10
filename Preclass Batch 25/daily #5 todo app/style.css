@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+::selection {
+  color: #ffff;
+  background: rgb(142, 73, 232);
+}
+body {
+  width: 100%;
+  height: 100vh;
+  /* overflow: hidden; */
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/*---LEFT SIDE---*/
+.left-side {
+  padding: 5%;
+  flex: 40%;
+}
+
+.left-side .header {
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 1.2;
+  margin-bottom: 34px;
+  overflow-y: hidden;
+  color: rgb(142, 73, 232);
+}
+
+.left-side .paragraph {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  color: #979797;
+  margin-bottom: 20px;
+}
+
+.todo {
+  display: flex;
+  margin: 20px 0;
+  background: whitesmoke;
+  padding: 10px;
+  border-radius: 5%;
+}
+
+.todo .todo-name {
+  /* flex: 60%; */
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  padding-left: 10px;
+}
+.todo .todo-desc {
+  font-size: 15px;
+  line-height: 36px;
+  padding-left: 10px;
+}
+
+.todo .todo-isdone {
+  flex: 40%;
+  text-align: right;
+}
+
+.text-success {
+  text-decoration: line-through rgb(153, 152, 152) !important;
+  color: rgb(153, 152, 152) !important;
+}
+
+.left-side .btn-delete {
+  background: #ff0000;
+  border-radius: 10px;
+  width: 32px;
+  height: 35px;
+  border: 0;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.left-side .btn-delete:active {
+  background: #850000;
+  transition: 0.4s;
+}
+
+.left-side .btn-done {
+  background: #6caa08;
+  border-radius: 10px;
+  height: 35px;
+  width: 35px;
+  border: 0;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.left-side .btn-done:active {
+  background: #467200;
+  transition: 0.4s;
+}
+
+.left-side .row-todo {
+  margin: 10px 0;
+}
+.text-center {
+  text-align: center;
+  margin-top: 60px;
+}
+
+/*---RIGHT SIDE---*/
+.right-side {
+  background: linear-gradient(to right, #49a09d, #5f2c82);
+  flex: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.right-side .card {
+  background: #fefefe;
+  width: 60%;
+  min-height: 400px;
+  padding: 50px 50px;
+  border-radius: 5%;
+}
+
+.right-side .card .label-input {
+  display: block;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 27px;
+  padding-left: 8px;
+}
+
+.right-side .card .input {
+  margin: 10px 0;
+  background: #f1f1f1;
+  border: 2px solid #d5d5d5;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 100%;
+  height: 50px;
+  padding: 8px;
+  font-size: 20px;
+}
+
+.right-side .card .input:focus {
+  outline: 0;
+}
+
+.right-side .card .btn-submit {
+  height: 55px;
+  width: 100%;
+  background: rgb(142, 73, 232);
+  border-radius: 10px;
+  border: 0;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+  margin-top: 30px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.right-side .card .btn-submit:active {
+  background: #fb91f1;
+  transition: 0.4s;
+}

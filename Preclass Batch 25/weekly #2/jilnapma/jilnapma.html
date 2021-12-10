@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Check</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-side">
+        <div class="header">Check Number</div>
+        <p class="paragraph">Below is a list of your duties</p>
+        <div id="show-number"></div>
+      </div>
+      <div class="right-side">
+        <div class="card">
+          <label for="input-number" class="label-input">Input Number :</label>
+          <input type="number" id="input-number" class="input" />
+          <button type="button" class="btn-submit" id="btn-odd" onclick="oddNum()"><i class="fa fa-search" aria-hidden="true"></i>&nbsp&nbspCheck Odd Number</button>
+          <button type="button" class="btn-submit" id="btn-even" onclick="evenNum()"><i class="fa fa-search" aria-hidden="true"></i>&nbsp&nbspCheck Even Number</button>
+          <button type="button" class="btn-submit" id="btn-prime" onclick="primeNum()"><i class="fa fa-search" aria-hidden="true"></i>&nbsp&nbspCheck Prime Number</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

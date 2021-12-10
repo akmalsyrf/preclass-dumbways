@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand ms-2" href="/">Movie Ticket App</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      {{#if isLogin}}
+
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <div class="dropdown">
+              <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="/public/image/user.png" width="50px" alt="user" />
+              </a>
+
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="/profile">Your Profile</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="/logout">Logout</a></li>
+              </ul>
+            </div>
+
+          </li>
+        </ul>
+      {{else}}
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="btn-login me-2 px-4 py-1" href="/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn-register px-3 py-1" href="/register">Register</a>
+          </li>
+        </ul>
+      {{/if}}
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-side">
+        <div class="header">Your Todo</div>
+        <p class="paragraph">Below is a list of your duties</p>
+        <div id="show-todo"></div>
+      </div>
+      <div class="right-side">
+        <div class="card">
+          <label for="input-todo" class="label-input">Input Your Todo :</label>
+          <input type="text" id="input-todo" class="input" />
+          <label for="desc-todo" class="label-input">Description :</label>
+          <input type="text" id="desc-todo" class="input" />
+          <button class="btn-submit" id="btn-submit" onclick="addTodo()"><i class="fa fa-list-ul" aria-hidden="true"></i>&nbsp&nbspAdd Todo</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

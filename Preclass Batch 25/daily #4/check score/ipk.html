@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Check Your Score</title>
+  </head>
+  <body>
+    <div class="background">
+      <div class="container">
+        <div class="screen">
+          <div class="screen-body">
+            <div class="screen-body-item left">
+              <div class="app-title">
+                <span class="output">&ltResult will appear here&gt</span>
+              </div>
+            </div>
+            <div class="screen-body-item">
+              <div class="app-info">
+                <form class="app-form-group">
+                  <input type="number" class="app-form-control score" placeholder="Input Your Score (0-100)" required />
+                  <button type="submit" class="app-form-button submit" onclick="init()">SUBMIT</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function init(e) {
+        e.preventDefault();
+        const nilai = parseInt(document.querySelector(".score").value);
+
+        // document.querySelector(".output").innerHTML = nilai;
+
+        if (nilai >= 80 && nilai <= 100) {
+          document.querySelector(".output").innerHTML = "Selamat!<br>Predikat nilai kamu A";
+        } else if (nilai >= 60 && nilai <= 79) {
+          document.querySelector(".output").innerHTML = "Selamat!<br>Predikat nilai kamu B";
+        } else if (nilai >= 40 && nilai <= 59) {
+          document.querySelector(".output").innerHTML = "Tingkatkan lagi!<br>Predikat nilai kamu C!";
+        } else if (nilai >= 20 && nilai <= 39) {
+          document.querySelector(".output").innerHTML = "Perbaiki lagi sobat!<br><br>Predikat nilai kamu D!";
+        } else if (nilai >= 0 && nilai <= 19) {
+          document.querySelector(".output").innerHTML = "Ayo kejar teman-temanmu!<br><br>Predikat nilai kamu E!";
+        }
+      }
+    </script>
+  </body>
+</html>

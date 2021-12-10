@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Form</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="g.css"></link>
+  </head>
+  <body>
+    <!-- begin container flex -->
+    <div class="container">
+      <!-- begin left side -->
+      <div class="left-side">
+        <div>
+          <h1>Bio Form</h1>
+          <img src="person.svg" class="img" alt="img" />
+          <p class="info name"><i class="icons far fa-id-badge"></i>&ltYour name here&gt</p>
+          <p class="info summary"><i class="icons fas fa-id-badge"></i>&ltYour summary here&gt</p>
+          <p class="info phone"><i class="icons fas fa-phone-alt"></i>&ltYour phone here&gt</p>
+          <p class="info gender"><i class="icons fas fa-venus-mars"></i>&ltYour gender here&gt</p>
+          <p class="info birth"><i class="icons fas fa-id-badge"></i>&ltYour age here&gt</p>
+          <p class="info jobs"><i class="icons fas fa-id-badge"></i>&ltYour job here&gt</p>
+          <p class="info edu"><i class="icons fas fa-id-badge"></i>&ltYour education here&gt</p>
+          <p class="info address"><i class="icons fas fa-map-marker-alt"></i>&ltYour address here&gt </p>
+        </div>
+      </div>
+      <!-- finish left side -->
+
+      <!-- begin right side -->
+      <div class="right-side">
+        <div class="card">
+          <!-- begin form -->
+          <form action="#" id="form" method="POST">
+            <h2>Input Your Data</h2>
+            <div class="group-input">
+              <label for="name">Name</label>
+              <input type="text" class="inputbox" id="name" required />
+            </div>
+            <div class="group-input">
+              <label for="summary">Summary</label>
+              <input type="text" class="inputbox" id="summary" required />
+            </div>
+            <!-- begin two segments flex -->
+            <div class="choose-parent">
+              <!-- begin left side child -->
+              <div class="choose-child">
+                <div class="group-input">
+                  <label for="phone">Phone</label>
+                  <input type="text" class="inputbox" id="phone" pattern="[0-9]+" required />
+                </div>
+                <div class="input-gender">
+                  <label for="gender" class="label-parent">Gender</label>
+                  <input type="radio" id="genderf" name="gender" value="a Female" />
+                  <label for="genderf">Female</label>
+
+                  <input type="radio" id="genderm" name="gender" value="a Male" />
+                  <label for="genderm">Male</label>
+                </div>
+                <div class="input-birth">
+                  <label for="birth" class="label-parent">Birthday</label>
+                  <input type="date" class="inputbox" id="birth" required />
+                </div>
+              </div>
+              <!-- finish left side child -->
+              <!-- begin right side child -->
+              <div class="choose-child">
+                <div class="input-jobs">
+                  <label for="jobs" class="label-parent">Jobs</label>
+                  <select name="jobs" class="inputbox" id="jobs" required>
+                    <option selected disabled>Select</option>
+                    <option id="empl" value="Employee">Employee</option>
+                    <option id="cgov" value="Civil Goverment">Civil Goverment</option>
+                    <option id="stu" value="Student">Student</option>
+                    <option id="freelan" value="Freelancer">Freelancer</option>
+                    <option id="enter" value="Entrepreneur">Entrepreneur</option>
+                    <option id="fresh" value="Freshgraduate">Freshgraduate</option>
+                  </select>
+                </div>
+                <div class="input-edu">
+                  <label for="edu" class="label-parent">Education</label>
+                  <input type="checkbox" id="edu1" name="edu" value="Bachelor Degree" />
+                  <label for="edu1"> Bachelor Degree</label><br />
+                  <input type="checkbox" id="edu2" name="edu" value="Senior High School" />
+                  <label for="edu2"> Senior High School</label><br />
+                  <input type="checkbox" id="edu3" name="edu" value="Junior High School" />
+                  <label for="edu3"> Junior High School</label><br />
+                  <input type="checkbox" id="edu4" name="edu" value="Elementary School" />
+                  <label for="edu4"> Elementary School</label>
+                </div>
+              </div>
+              <!-- finish right side child -->
+            </div>
+            <!-- finish two segments flex -->
+            <div class="group-input">
+              <label for="address">Address</label>
+              <textarea id="address" name="address" cols="50" rows="5" required></textarea>
+            </div>
+            <div class="group-input">
+              <label for="img">Insert your photo</label>
+              <input type="file" id="img" class="inputbox"/>
+            </div>
+            <div class="btn-submit">
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+          <!-- finish form -->
+        </div>
+      </div>
+      <!-- finish right side -->
+    </div>
+    <!-- finish container flex -->
+    <script>
+      
+      function render(){
+        //INPUT
+        const name = document.getElementById("name").value;
+        const summary = document.getElementById("summary").value;
+        const phone = document.getElementById("phone").value;
+        const gender = document.querySelector("input[name=gender]:checked").value;
+        const birth = document.getElementById("birth").value;
+        const jobs = document.getElementById("jobs").value;
+        const education = document.querySelectorAll("input[name=edu]:checked");
+        selectedEdu = [];
+        for (const edu of education) {
+          selectedEdu.push(edu.value);
+        }
+        const address = document.getElementById("address").value;
+        const img = document.getElementById("img").files[0].name;
+        // let inputImg = document.getElementById("img");
+        // var fReader = new FileReader();
+        // fReader.readAsDataURL(inputImg.files[0]);
+        // fReader.onloadend = function (event) {
+        //   let img = document.querySelector(".img");
+        //   img.src = event.target.result;
+        // };
+
+        //OUTPUT
+        document.querySelector(".name").innerHTML = `<i class="icons far fa-id-badge"></i> ${name}`;
+        document.querySelector(".summary").innerHTML = `<i class="icons fas fa-id-badge"></i> ${summary}`;
+        document.querySelector(".phone").innerHTML = `<i class="icons fas fa-phone-alt"></i> ${phone}`;
+        //gender
+        if (gender == "a Female") {
+          document.querySelector(".gender").innerHTML = `<i class="icons fas fa-venus"></i> ${gender}`;
+        } else {
+          document.querySelector(".gender").innerHTML = `<i class="icons fas fa-mars"></i> ${gender}`;
+        }
+        //age
+        let today = new Date();
+        let birthday = new Date(birth);
+        let year = 0;
+        if (today.getMonth() < birthday.getMonth()) {
+          year = 1;
+        } else if (today.getMonth() == birthday.getMonth() && today.getDate() < birthday.getDate()) {
+          year = 1;
+        }
+        var age = today.getFullYear() - birthday.getFullYear() - year;
+        if (age < 0) {
+          age = 0;
+        }
+        document.querySelector(".birth").innerHTML = `<i class="icons fas fa-id-badge"></i> ${age}th years`;
+        // document.querySelector(".birth").innerHTML = `<i class="icons fas fa-id-badge"></i> ${birth}`;
+        document.querySelector(".jobs").innerHTML = `<i class="icons fas fa-id-badge"></i> ${jobs}`;
+        document.querySelector(".edu").innerHTML = `<i class="icons fas fa-id-badge"></i> ${selectedEdu.join("<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp")}`;
+        document.querySelector(".address").innerHTML = `<i class="icons fas fa-map-marker-alt"></i> ${address}`;
+        document.querySelector(".img").src = img;
+        console.log(img);
+      }
+      
+      //SELECT DOM FORM
+      const form = document.getElementById("form");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        render();
+      });
+    </script>
+  </body>
+</html>

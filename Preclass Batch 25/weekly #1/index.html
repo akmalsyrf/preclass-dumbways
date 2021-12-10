@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Your Biodata</title>
+  </head>
+
+  <body>
+    <div class="background">
+      <div class="container">
+        <div class="screen">
+          <div class="screen-body">
+            <div class="screen-body-item left">
+              <!-- BEGIN LEFT ITEM -->
+              <div class="app-title">
+                <span>BIODATA</span>
+                <span id="name">FORM</span>
+              </div>
+              <div class="app-info">
+                MADE TO COMPLETE TASK WEEKLY #1 <br />
+                Pre-Class DumbWays Batch-5
+              </div>
+            </div>
+            <!-- FINISH LEFT ITEM -->
+            <!-- BEGIN RIGHT ITEM -->
+            <div class="screen-body-item">
+              <form class="app-form">
+                <div class="app-form-group">
+                  <input type="text" class="app-form-control name" placeholder="NAME" required />
+                </div>
+                <div class="app-form-group">
+                  <input type="text" class="app-form-control stay" placeholder="ADDRESS" required />
+                </div>
+                <div class="choose-parent">
+                  <div class="choose-child">
+                    <div class="app-form-group choose">
+                      <h3>Gender</h3>
+                      <input type="radio" id="genderf" name="gender" value="a Female" class="fmale" />
+                      <label for="genderf">Female</label>
+
+                      <input type="radio" id="genderm" name="gender" value="a Male" class="male" />
+                      <label for="genderm">Male</label>
+                    </div>
+                    <div class="app-form-group choose">
+                      <h3>Birthday</h3>
+                      <input type="date" class="birth" />
+                    </div>
+                  </div>
+                  <div class="choose-child">
+                    <div class="app-form-group choose hobbies">
+                      <h3>Hobbies</h3>
+                      <input type="checkbox" name="hobby" value="Programming" />
+                      <label for="passion1"> Programming</label><br />
+                      <input type="checkbox" name="hobby" value="Sport" />
+                      <label for="passion2"> Sport</label><br />
+                      <input type="checkbox" name="hobby" value="Game" />
+                      <label for="passion3"> Game</label><br />
+                      <input type="checkbox" name="hobby" value="Read" />
+                      <label for="passion4"> Read</label><br />
+                      <input type="checkbox" name="hobby" value="Writing" />
+                      <label for="passion5"> Writing</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="app-form-group buttons">
+                  <button type="reset" class="app-form-button">CANCEL</button>
+                  <button type="button" class="app-form-button" onclick="addCard()">SUBMIT</button>
+                </div>
+              </form>
+            </div>
+            <!-- FINISH RIGHT ITEM -->
+          </div>
+        </div>
+        <!-- BEGIN CREDITS -->
+        <div class="credits">
+          Made with love
+          <a class="credits-link" href="https://github.com/" target="_blank">
+            <svg class="github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 23.406">
+              <defs>
+                <style>
+                  .cls-1 {
+                    fill: #fff;
+                  }
+                </style>
+              </defs>
+              <path
+                id="github_1_"
+                data-name="github (1)"
+                class="cls-1"
+                d="M12,.3A12,12,0,0,0,8.2,23.682c.6.113.82-.258.82-.577,0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61A3.181,3.181,0,0,0,3.633,17.7c-1.087-.744.084-.729.084-.729a2.516,2.516,0,0,1,1.838,1.236,2.557,2.557,0,0,0,3.495,1,2.558,2.558,0,0,1,.76-1.6c-2.665-.3-5.466-1.332-5.466-5.93A4.63,4.63,0,0,1,5.579,8.45a4.267,4.267,0,0,1,.105-3.176s1.005-.322,3.3,1.23a11.314,11.314,0,0,1,6,0c2.28-1.552,3.285-1.23,3.285-1.23a4.385,4.385,0,0,1,.12,3.176,4.648,4.648,0,0,1,1.23,3.22c0,4.61-2.805,5.625-5.475,5.92a2.873,2.873,0,0,1,.81,2.22c0,1.606-.015,2.9-.015,3.286,0,.315.21.69.825.57A11.985,11.985,0,0,0,12,.3"
+                transform="translate(0 -0.297)"
+              />
+            </svg>
+            akmalsyrf
+          </a>
+        </div>
+        <!-- FINISH CREDITS -->
+      </div>
+    </div>
+
+    <!-- SHOW CARD NAME -->
+    <div class="show-card"></div>
+    <!-- FINISH CARD NAME -->
+    <script src="script.js"></script>
+  </body>
+</html>
